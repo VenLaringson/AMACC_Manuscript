@@ -1,0 +1,62 @@
+\documentclass[12pt,oneside,listof=totoc,]{scrbook}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,left=40mm, right=25mm, top=25mm,bottom=25mm]{geometry}
+\usepackage{scrlayer-scrpage}
+\usepackage{setspace}
+
+%indent by 5 spaces
+\usepackage{indentfirst}
+\settowidth{\parindent}{~~~~~}
+
+%FONT
+\usepackage{helvet} %Use Helvetica font
+\renewcommand{\familydefault}{\sfdefault} %Use San Serif
+
+%No Headers
+\pagestyle{plain}
+
+\begin{document}
+
+\input{preliminaries/title}
+
+\frontmatter
+\pagenumbering{roman}
+
+\chapter{Acknowledgements}
+\input{preliminaries/acknowledgement}
+
+\chapter{Abstract}
+\input{preliminaries/abstract}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\chapter{Definition of Terms}
+
+\mainmatter
+\doublespacing
+
+\chapter{Introduction}
+\input{chapters/01.introduction}
+
+\chapter{Review of Related Literature}
+\input{chapters/02.relatedliterature}
+
+\chapter{Methodology}
+\input{chapters/03.methodology}
+
+\chapter{Recommendations}
+\input{chapters/04.recommendations}
+
+\bibliography{References}
+
+\appendix
+\chapter{Appendices}
+\input{appendices/appendix}
+
+\end{document}
+
+
